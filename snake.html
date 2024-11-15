@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link href="css/snake.css" rel="stylesheet">
+  <script src="js/script.js" type="text/javascript" defer></script>
+</head>
+<body>
+  <nav>
+    <a href="index.html" id="backButton" title="Regresar al inicio">&#8592;</a> <!-- Flecha hacia la izquierda -->
+  </nav>
+
+  <div id="gameContainer">
+    <!-- Sección de instrucciones -->
+    <div id="instructions">
+      <h3>Instrucciones</h3>
+      <p>Usa las <strong>flechas del teclado</strong> para mover la serpiente.</p>
+      <img src="images/flechas.jpg" alt="Teclas de flechas" class="arrow-keys">
+      <p>Haz click en <strong>Start</strong> o presiona <strong>barra espaciadora</strong> para comenzar.</p>
+    </div>
+
+    <!-- Contenedor del tablero -->
+    <div id="boardContainer">
+      <div id="board"></div>
+    </div>
+  </div>
+
+  <div class="boardInfo">
+    <div>
+        Score: <div id="scoreBoard"></div>
+    </div>
+    <button id="start">Start</button>
+  </div>
+
+  <div id="gameOver">Game Over</div>
+</body>
+</html>
+
+

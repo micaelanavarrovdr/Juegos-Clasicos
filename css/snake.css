@@ -1,0 +1,167 @@
+* {
+  font-family: 'Share Tech Mono', monospace;
+  box-sizing: border-box; /* Asegura que el padding no afecte al tamaño total de los elementos */
+}
+
+body {
+  background-color: #F8EDED;
+  margin: 0;
+  padding: 0;
+  font-family: 'Share Tech Mono', monospace;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilo del nav y la flecha */
+nav {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px 20px;  /* Ajusta el padding si es necesario */
+  background-color: #222;
+  color: #fff;
+  width: 100%; /* Asegura que el nav ocupe el ancho completo */
+  box-sizing: border-box; /* Evita problemas de padding en el ancho */
+}
+
+#backButton {
+  font-size: 30px;
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
+/* Mostrar el texto al pasar el mouse */
+#backButton:hover {
+  color: #3498db;  /* Cambiar color de la flecha al pasar el ratón */
+}
+
+/* Texto emergente */
+#backButton::after {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Mostrar el texto cuando se pasa el ratón sobre la flecha */
+#backButton:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Tablero y su contenedor */
+#boardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  margin-left: 30px; /* Ajuste para centrar el tablero al lado de las instrucciones */
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  width: 500px;
+}
+
+.boardInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  width: 100%;
+  padding: 0 330px;
+}
+
+#start, .boardInfo {
+  font-size: 25px;
+}
+
+#gameOver {
+  display: none;
+}
+
+
+
+
+#start{
+  background-color: #f35a69;
+  border: none;
+  color: white;
+}
+
+#scoreBoard{
+  display: inline-flex;
+}
+
+.square{
+  aspect-ratio: 1;
+}
+
+.emptySquare{
+  background-color:#456990;
+}
+
+.snakeSquare{
+  background-color: #ccf47f;
+}
+
+.foodSquare{
+  background-color: #f35a69;
+}
+
+#gameOver {
+  display: none;
+  font-size: 50px;         /* Tamaño de fuente grande */
+  color: red;              /* Color del texto */
+  font-weight: bold;       /* Negrita */
+  position: absolute;      /* Posicionamiento absoluto */
+  top: 50%;                /* Centrado verticalmente */
+  left: 50%;               /* Centrado horizontalmente */
+  transform: translate(-50%, -50%);  /* Ajuste perfecto del centro */
+}
+
+
+/* Contenedor principal de instrucciones y tablero */
+#gameContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  padding-top: 20px; /* Espacio superior */
+}
+
+/* Sección de instrucciones */
+#instructions {
+  width: 200px;
+  padding: 10px;
+  background-color: #DCE4C9;
+  margin-right: 50px; /* Mayor margen para alejarlo del tablero */
+  text-align: left;
+  font-size: 16px;
+  border-radius: 5px;
+  position: fixed;
+  left: 20px; /* Fija la sección al lado izquierdo de la pantalla */
+  top: 100px; /* Ajuste vertical según sea necesario */
+}
+
+#instructions h3 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.arrow-keys {
+  width: 100%;
+  max-width: 150px;
+  margin-top: 10px;
+}
